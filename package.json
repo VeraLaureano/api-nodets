@@ -1,0 +1,30 @@
+{
+  "name": "api-nodets",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "ts-node-dev ./src/app.ts",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VeraLaureano/api-nodets.git"
+  },
+  "keywords": [],
+  "author": "VeraLaureano <laureanoivangerardovera@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VeraLaureano/api-nodets/issues"
+  },
+  "homepage": "https://github.com/VeraLaureano/api-nodets#readme",
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "ts-node-dev": "^2.0.0"
+  }
+}
