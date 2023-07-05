@@ -1,9 +1,8 @@
 import express from 'express';
+import { NODE_ENV, PORT } from './config/config';
 
 const app = express();
 
-const PORT: string | number = process.env.PORT || 3000;
-
 app.listen(PORT, () => {
-    console.log(`Server listening on port ${PORT}`);
+    console.log(`Server listening in mode: ${NODE_ENV}, on port ${PORT}`);
 })
