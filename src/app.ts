@@ -1,8 +1,28 @@
 import express from 'express';
-import { NODE_ENV, PORT } from './config/config';
+import { NODE_ENV, PORT } from "./config/config";
+import { Routes } from "./interfaces/route.interface";
+import { logger } from './utils/loggers';
 
-const app = express();
+class App {
+    public app: express.Application;
+    public env: string;
+    public port: number;
 
-app.listen(PORT, () => {
-    console.log(`Server listening in mode: ${NODE_ENV}, on port ${PORT}`);
-})
+    constructor(routes: Array<Routes>) {
+        this.app = express();
+        this.env = NODE_ENV || "development";
+        this.port = Number(PORT) || 5000;
+    }
+
+    public listen() {
+        this.app.listen(this.port, () => {
+            logger.info('=============================');
+            logger.info('====== ENV: ${this.env} =====');
+            logger.info('Server listening on port ${this.port}');
+            logger.info('=============================');
+        })
+    }
+    
+}  
+
+export default App;

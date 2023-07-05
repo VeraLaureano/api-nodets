@@ -2,15 +2,15 @@
   "name": "api-nodets",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start:dev": "cross-env NODE_ENV=development ts-node-dev ./src/app.ts",
-    "start:test": "cross-env NODE_ENV=test ts-node ./src/app.ts",
-    "start:prod": "cross-env NODE_ENV=production ts-node ./src/app.ts",
+    "start:dev": "cross-env NODE_ENV=development ts-node-dev ./src/index.ts",
+    "start:test": "cross-env NODE_ENV=test ts-node ./src/index.ts",
+    "start:prod": "cross-env NODE_ENV=production ts-node ./src/index.ts",
     "build": "tsc",
     "lint": "eslint ./src/**/*.ts",
-    "lint:fix":"eslint ./src/**/*.ts --fix"
+    "format":"eslint ./src/**/*.ts --fix"
   },
   "repository": {
     "type": "git",
